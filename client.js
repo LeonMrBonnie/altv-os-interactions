@@ -128,7 +128,6 @@ function getZoneName(x, y, z) {
 
 //Exports
 
-alt.on("interactions:create", createInteraction);
 export function createInteraction(name, pos, range, handler) {
     if(typeof name !== "string") return alt.logError(`[Interactions]: Name is not a string`);
     if(typeof range !== "number") return alt.logError(`[Interactions]: Range is not a number`);
@@ -136,7 +135,6 @@ export function createInteraction(name, pos, range, handler) {
     new Interaction(name, pos, range, handler);
 }
 
-alt.on("interactions:remove", removeInteraction);
 export function removeInteraction(name) {
     let interaction = Interaction.getByName(name);
     if(!interaction) return alt.logError(`[Interactions]: Interaction '${name}' was not found`);

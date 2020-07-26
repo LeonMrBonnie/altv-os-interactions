@@ -14,8 +14,6 @@ An interaction is a position on the map where you can press a button to do somet
 
 This resource provides an easy way to create and remove interactions.
 
-You can either use the exported functions from this resource, or call the events.
-
 ## Installing Dependencies / Installation
 
 **I cannot stress this enough. Ensure you have NodeJS 13+ or you will have problems.**
@@ -32,7 +30,7 @@ After simply add the name of this resource to your `server.cfg` resource section
 
 `altv-os-interactions`
 
-If you want to use the exported functions instead of the events also add the name of this resource to the `deps` array of your `resource.cfg` from your main gamemode.
+Also add the name of this resource to the `deps` array of your `resource.cfg` from your main gamemode.
 
 Then simply clone this repository into your main server resources folder.
 
@@ -49,9 +47,7 @@ Ensure your `package.json` includes this property:
 
 # Importing the resource
 
-If you don't want to use the events, but want to use the exported functions instead, you first have to make sure the resource where you want to use the interactions has this resource listed in its `deps`.
-
-Then you can import the resource by using:
+You can import the resource by using:
 ```js
 import * as Interactions from "altv-os-interactions";
 ```
@@ -60,7 +56,7 @@ And you can then use the functions by using e.g. `Interactions.createInteraction
 
 # Creating a new interaction
 
-You can create an interaction by using the exported function `createInteraction` or by calling the event `interactions:create`. Both take the same arguments:
+You can create an interaction by using the exported function `createInteraction`.
 
 | Parameter    | Type       | Description                                            |
 | ------------ | ---------- | ------------------------------------------------------ |
@@ -71,7 +67,7 @@ You can create an interaction by using the exported function `createInteraction`
 
 # Removing an existing interaction
 
-You can remove an existing interaction by using the exported function `removeInteraction` or by calling the event `interactions:remove`. Both take the same arguments:
+You can remove an existing interaction by using the exported function `removeInteraction`.
 
 | Parameter    | Type       | Description                                            |
 | ------------ | ---------- | ------------------------------------------------------ |
