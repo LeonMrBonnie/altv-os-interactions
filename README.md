@@ -22,10 +22,6 @@ This resource provides an easy way to create and remove interactions.
 -   An Existing or New Gamemode
 -   General Scripting Knowledge
 
-First download the JS wrapper for the C# entity sync from [GitHub](https://github.com/Kudze/altv-csharp-entity-sync-to-js-wrapper).<br>
-Then you need to build it using `dotnet publish -c Release` and create a new resource with the type `csharp`.<br>
-You should name this resource `entitysync-wrapper`
-
 After simply add the name of this resource to your `server.cfg` resource section.
 
 `altv-os-interactions`
